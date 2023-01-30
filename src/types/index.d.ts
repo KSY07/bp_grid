@@ -1,14 +1,22 @@
 export declare namespace PMSGrid {
 
-    interface GridLayout<R,C> {
-        rows: R[]; // Grid의 rows집합
-        columns: C[]; // Grid의 columns 집합
-    }
-
-    interface CellOptions {
-        color?: string; // 색상 값
+    interface BaseCellOptions {
+        textColor?: string; // 폰트 색상값
+        color?: string; // 색상 값(Background)
         drop?: boolean; // 드롭메뉴 여부
         innerContent: string;  // 내부 내용
+    }
+
+    interface CellOptions extends BaseCellOptions {
+        isEnable?: boolean;
+    }
+
+    interface ColumnOptions extends BaseCellOptions {
+
+    }
+
+    interface RowOptions extends BaseCellOptions {
+
     }
 
     interface LayoutOptions {
@@ -17,11 +25,16 @@ export declare namespace PMSGrid {
         innerContent: string; // 내부 내용
     }
 
-    interface GridOptions<R,C> {
-       el: HTMLElement;  //Grid를 렌더랑 할 대상 Element
-       width?: number; // Grid의 가로 길이
-       heigth?: number; // Grid의 세로 길이
-       layout: GridLayout<R,C>; // Grid의 Layout Data;
+    interface GridOptions {
+       width: number; // Grid의 가로 길이
+       height: number; // Grid의 세로 길이
+       data?: GridData;
+    }
+
+    interface GridData {
+        columns: ColumnOptions[];
+        rows: RowOptions[];
+        cells: CellOptions[];
     }
 
 }

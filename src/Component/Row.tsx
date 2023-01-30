@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { PMSGrid } from "../types";
 
 
-export const Row = (props:PMSGrid.CellOptions) => {
+export const Row = (props:PMSGrid.RowOptions) => {
 
     const RowBox = styled.div`
         display: inline-block;

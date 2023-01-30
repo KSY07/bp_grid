@@ -3,7 +3,7 @@ import React from "react";
 import { PMSGrid } from "../types";
 
 
-export const Column = (props:PMSGrid.CellOptions) => {
+export const Column = (props:PMSGrid.ColumnOptions) => {
     const ColumnBox = styled.div`
         display: inline-block;
         background-color: ${props.color};
