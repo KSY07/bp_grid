@@ -20,7 +20,6 @@ export default class Grid extends React.Component {
         data: {
             columns:[],
             rows:[],
-            cells:[]
         },
         width: 0,
         height: 0
@@ -58,7 +57,7 @@ export default class Grid extends React.Component {
                 <Container width={this.state.width} height={this.state.height}>
                     <Columns columnsOptions={this.state.data?.columns} />
                     <SContainer>
-                        <Rows rowsOptions={this.state.data?.rows} />
+                        {this.state.data?.rows.length == 0 ? null : <Rows rowsOptions={this.state.data?.rows} />}
                     </SContainer>
                 </Container>
             </div>

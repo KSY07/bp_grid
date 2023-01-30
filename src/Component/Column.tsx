@@ -10,11 +10,11 @@ export const Column = (props:PMSGrid.ColumnOptions) => {
         border: 1px solid gray;
         border-radius: 4px;
         width: 100px;
-        height: 20px;
+        height: auto;
         cursor: ${props.drop ? "pointer" : "cell"};
         text-align: center;
         margin: 0 auto;
-        padding: 1rem 0;
+        padding: 0 0;
         font-size: 0.8rem;
         word-break: break-all;
 

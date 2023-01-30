@@ -18,7 +18,7 @@ export const Rows = (props:RowsProps) => {
         <RowsContainer>
             <>
                 {props.rowsOptions?.map((rowsOption) => {
-                    return <Row innerContent={rowsOption.innerContent} drop={rowsOption.drop} color={rowsOption.color}/>
+                    return <Row title={rowsOption.title} data={rowsOption.data} />
                 })}
             </>
         </RowsContainer>

@@ -39,24 +39,30 @@ const testData:PMSGrid.GridData = {
     ],
     rows: [
         {   
-            innerContent: "TestR1",
             color: "white",
-            drop: false
+            title: "TestR1",
+            data: [
+                {
+                    innerContent: "Test1-1"
+                },
+                {
+                    innerContent: "Test1-2"
+                },
+            ]
         },
-    
-        {
-            innerContent: "TestR2",
+        {   
             color: "white",
-            drop: false
+            title: "TestR2",
+            data: [
+                {
+                    innerContent: "Test2-1"
+                },
+                {
+                    innerContent: "Test2-2"
+                },
+            ]
         },
-    
-        {
-            innerContent: "TestR3",
-            color: "white",
-            drop: true
-        },
-    ],
-    cells: []
+    ]
 }
 
 export const BasicGrid = Template.bind({});

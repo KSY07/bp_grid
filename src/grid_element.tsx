@@ -12,10 +12,8 @@ interface SContainerProps {
 }
 
 export const Container = ({children ,width, height}:ContainerProps) => {
+
     const GridContainer = styled.div`
-    border-style: solid;
-    width: ${width}px;
-    height: ${height}px;
     `
     return (
         <GridContainer>
@@ -25,6 +23,7 @@ export const Container = ({children ,width, height}:ContainerProps) => {
 }
 
 export const SContainer = ({children}:SContainerProps) => {
+    
     const RowAndCellContainer = styled.div`
     display:flex;
     flex-direction: row;
@@ -38,6 +37,7 @@ export const SContainer = ({children}:SContainerProps) => {
 }
 
 export const FirstBox = () => {
+
     const FirstBox = styled.div`
     display: inline-block;
     background-color: 'white';

@@ -4,7 +4,7 @@ export declare namespace PMSGrid {
         textColor?: string; // 폰트 색상값
         color?: string; // 색상 값(Background)
         drop?: boolean; // 드롭메뉴 여부
-        innerContent: string;  // 내부 내용
+        innerContent?: string;  // 내부 내용
     }
 
     interface CellOptions extends BaseCellOptions {
@@ -16,7 +16,8 @@ export declare namespace PMSGrid {
     }
 
     interface RowOptions extends BaseCellOptions {
-
+        title: String;
+        data?: CellOptions[];
     }
 
     interface LayoutOptions {
@@ -34,7 +35,6 @@ export declare namespace PMSGrid {
     interface GridData {
         columns: ColumnOptions[];
         rows: RowOptions[];
-        cells: CellOptions[];
     }
 
 }

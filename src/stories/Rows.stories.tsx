@@ -1,45 +1,48 @@
-import { Rows } from "../Component/Rows";
 import { ComponentMeta } from "@storybook/react";
 import React from "react";
 import { ComponentStory } from "@storybook/react";
 import { PMSGrid } from "../types";
+import { Rows } from "../Component/Rows";
 
 export default {
     title: 'PMSGrid/Rows',
     component: Rows,
     // More on argTypes: https://storybook.js.org/docs/react/api/argtypes
     argTypes: {
-      rowsOptions: {
-        color: {control:"color"}
-      }
+      color: { control: 'color' },
     },
   } as ComponentMeta<typeof Rows>;
 
 const Template: ComponentStory<typeof Rows> = (args) => <Rows {...args} />;
 
-const testData:PMSGrid.RowOptions[] = [
-    
+const testData = [
     {   
-        innerContent: "Test1",
         color: "white",
-        drop: false
+        title: "TestR1",
+        data: [
+            {
+                innerContent: "Test1-1"
+            },
+            {
+                innerContent: "Test1-2"
+            },
+        ]
     },
-
-    {
-        innerContent: "Test2",
+    {   
         color: "white",
-        drop: false
-    },
-
-    {
-        innerContent: "Test3",
-        color: "white",
-        drop: true
+        title: "TestR2",
+        data: [
+            {
+                innerContent: "Test2-1"
+            },
+            {
+                innerContent: "Test2-2"
+            },
+        ]
     },
 ]
-
 export const BasicRows = Template.bind({});
 // More on args: https://storybook.js.org/docs/react/writing-stories/args
 BasicRows.args = {
-  rowsOptions: testData
+    rowsOptions: testData  
 };
